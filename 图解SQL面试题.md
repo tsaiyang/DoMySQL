@@ -69,7 +69,7 @@ select 课程号,count(学号) as 选修人数 from score group by 课程号 hav
 
 - 查询两门以上不及格课程的同学的学号及其平均成绩
 ```
-select 学号,avg(成绩) as 平均成绩 from score where 成绩 < 60 group by 学号 having count(课程号)>=2;
+select 学号,avg(成绩) as 平均成绩 from score where 成绩<60 group by 学号 having count(课程号)>=2;
 ```
 
 - 查询学生的总成绩并进行排名
@@ -80,7 +80,7 @@ select 学号,sum(成绩) as 总成绩 ,dense_rank() over(order by sum(成绩)) 
 - 查询平均成绩大于60分的学生的学号和平均成绩
 ```
 select 学号,avg(成绩) as 平均成绩 from score group by 学号  having avg(成绩)>60;
-``` 
+```
 
 - 查询所有课程成绩小于60分学生的学号、姓名
 ```
