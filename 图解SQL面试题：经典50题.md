@@ -4,5 +4,5 @@ select * from student where 姓名 like "猴%";
 ```
 - 查询姓“孟”老师的个数
 ```
-select 
+select count(*) from teacher where 教师姓名="孟%";
 ```
